@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <StartupObject>DevOpsFlex.KeyVaultPocoCLI.Runner</StartupObject>
+    <AssemblyName>dotnet-kv-poco</AssemblyName>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <RootNamespace>DevOpsFlex.KeyVaultPocoCLI</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Views\PocoClass.cshtml" />
+    <None Remove="Views\PocoProjectFile.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Views\PocoClass.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\PocoProjectFile.cshtml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Azure.KeyVault" Version="2.3.2" />
+    <PackageReference Include="Microsoft.Azure.KeyVault.Core" Version="2.0.4" />
+    <PackageReference Include="Microsoft.Extensions.CommandLineUtils" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="3.16.1" />
+  </ItemGroup>
+
+</Project>
